@@ -1,0 +1,25 @@
+api 1: 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
+api 2: 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
+api 3: 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
+
+
+api 4: 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
+
+
+def generate_code(prompt):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo-16k",
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        temperature=1,
+        max_tokens=256,
+        top_p=1,
+        frequency_penalty=0,
+        presence_penalty=0
+    )
+    code = response.choices[0].message.content.strip()
+    return code
