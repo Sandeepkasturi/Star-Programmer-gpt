@@ -3,3 +3,15 @@ requests~=2.31.0
 PyQt5~=5.15.10
 gTTS~=2.4.0
 setuptools~=65.5.0
+
+
+
+# The Above is Packages that should be installed before executing the code. Note this packages may be updated as the days goes. So keep in mind to Update Packages
+
+# Commands to install updated packages
+
+1. pip install openai --upgrade
+2. pip install PyQt5 --upgrade
+3. pip install gtts --upgrade
+4. pip install webbrowser --upgrade
+5. pip install pyinstaller --upgrade # install this package if you want to convert this app into .exe application
