@@ -1,3 +1,6 @@
+# Developed By Sandeep Kasturi
+# System Software integrated by Openai LLM Model Chatgpt
+
 import openai
 import sys
 import PyQt5
@@ -5,14 +8,18 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QLin
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt, QTimer
 
+# System packages for Processing and Speech convertion
+
 import subprocess
 import webbrowser
 import requests
 from gtts import gTTS
 import os
-# Define the application details
-LICENSE = "Not approved yet"
-AUTHOR = "Sandeep Kasturi Diploma in Computer Engineering and AIML online"
+
+# Defining the application details
+
+LICENSE = "BSD 2 CLAUSE"
+AUTHOR = "Sandeep Kasturi"
 PROJECT = "STAR GPT AI APP"
 PRODUCT_NAME = "STAR GPT AI APP"
 COMPANY_NAME = "Sandeep Kasturi AI Verse company"
@@ -20,10 +27,12 @@ VERSION = "17"
 APPLICATION_TYPE = ".exe"
 
 # Set up the OpenAI API
-openai.api_key = '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'
+
+openai.api_key = "your_api_key_from_openai"
 
 
 # Function to generate code using OpenAI API
+
 def generate_code(prompt, language, engine):
     response = openai.Completion.create(
         engine=engine,
@@ -42,6 +51,7 @@ def generate_code(prompt, language, engine):
 
 # Function to generate image using OpenAI API
 # Function to open Notepad and write code/content
+
 def write_to_notepad(content, is_code=True):
     try:
         if is_code:
@@ -59,6 +69,7 @@ def write_to_notepad(content, is_code=True):
 
 
 # Function to convert text to speech using gTTS
+
 def text_to_speech(text):
     try:
         tts = gTTS(text=text, lang='en')
@@ -71,6 +82,7 @@ def text_to_speech(text):
 
 
 # Function to download and open the image
+
 def download_and_open_image(image_url):
     try:
         response = requests.get(image_url, stream=True)
@@ -82,6 +94,7 @@ def download_and_open_image(image_url):
         QMessageBox.critical(main_window, "Error", f"An error occurred while generating the image:\n{str(e)}")
 
 # Main function for code/content generation
+
 def generate_code_or_content(prompt, language, is_content, engine):
     try:
         if is_content:
@@ -345,3 +358,9 @@ if __name__ == "__main__":
 
     app.exec_()
     sys.exit()
+
+# MIT License Approved Project
+# BSD Clause 2 License Approved Project
+# General Public License Approved Project
+# Developed and Production, Management -- Sandeep Kasturi 21030-CM-136. Founder of Sandeep Kasturi AI Verse (SKAV)
+# https://sandeepkasturiaiverse.mydurable.com/
