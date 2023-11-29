@@ -1,10 +1,4 @@
-api 1: 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
-api 2: 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
-api 3: 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
-
-
-api 4: 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
-
+# Openai Engine Model
 
 def generate_code(prompt):
     response = openai.ChatCompletion.create(
